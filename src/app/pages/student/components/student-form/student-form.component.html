@@ -1,0 +1,91 @@
+<!-- breadcrumb -->
+<nav class="mb-5">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+    <li class="breadcrumb-item"><a routerLink="/students">Estudantes</a></li>
+    <li class="breadcrumb-item active">Cadastro de Estudantes</li>
+  </ol>
+</nav>
+
+<!-- Card -->
+<div class="card">
+  <h5 class="card-header">Cadastro de Estudantes</h5>
+  <div class="card-body">
+
+    <!-- Form-->
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="name">Nome</label>
+          <input type="text" class="form-control" id="name" placeholder="Nome" required="true">
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="email">e-Mail</label>
+          <input type="email" class="form-control" id="email" placeholder="e-Mail" required="true">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="cpf">CPF</label>
+          <input type="text" min="1" class="form-control" id="cpf" placeholder="CPF - somente números" required="true"
+            mask='000.000.000-00'>
+        </div>
+
+        <div class="form-group col-md-3">
+          <label for="rg">RG</label>
+          <input type="text" class="form-control" id="rg" placeholder="RG" mask='00000000000000'>
+        </div>
+
+        <div class="form-group col-md-3">
+          <label for="dateOfBirth">Data de Nascimento</label>
+          <input type="date" class="form-control" id="dateOfBirth" pattern="dd/MM/yyyy">
+        </div>
+
+        <div class="form-group col-md-3">
+          <label for="responsible">Responsável</label>
+          <input type="text" class="form-control" id="responsible" placeholder="Responsável legal">
+        </div>
+
+      </div>
+
+
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="fone">Telefone</label>
+          <input type="text" class="form-control" id="fone" mask='(000) 0 0000-0000' placeholder="Telefone"
+            required="true">
+        </div>
+
+        <div class="form-group col-md-3">
+          <label for="schoolLevel">Grau de Escolaridade</label>
+          <select id="schoolLevel" class="form-control">
+            <option selected>Educação Infantil</option>
+            <option>Ensino Fundamental</option>
+            <option>Ensino Médio</option>
+            <option>Graduação</option>
+            <option>Pós-Graduação</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-3">
+          <label for="schoolLevel">Bimestre</label>
+          <select id="schoolLevel" class="form-control">
+            <option selected>Primeiro Bimestre</option>
+            <option>Segundo Bimestre</option>
+            <option>Terceiro Bimestre</option>
+            <option>Quarto Bimestre</option>
+          </select>
+        </div>
+
+
+
+      </div>
+
+    </form>
+
+
+  </div>
+
+</div>
