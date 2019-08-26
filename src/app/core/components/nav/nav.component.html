@@ -1,54 +1,73 @@
+<!-- Coluna Esquerda do sidebar -  com Menu de Navegação -->
+<aside class="main-sidebar">
+  <section class="sidebar">
 
-  <!-- Coluna Esquerda do sidebar -  com Menu de Navegação -->
-  <aside class="main-sidebar">
-      <section class="sidebar">
-  
-        <!-- Sidebar Menu -->
-        <ul class="sidebar-menu" data-widget="tree">
-          <li class="header" style="text-align: center !important; padding: 15px 0 !important">MENU</li>
-  
-          <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i> <span>Home</span></a></li>
-          <li><a href="#"><i class="fa fa-database" aria-hidden="true"></i> <span>Another Link</span></a></li>
-  
-          <li class="treeview">
-            <a href="#"><i class="fa fa-plus"></i> <span>Register</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
+    <!-- Sidebar Menu -->
+    <ul class="sidebar-menu pt-4" data-widget="tree">
+      <li class="header" style="text-align: center !important; padding: 15px 0 !important">MENU</li>
+
+      <li><a href="#"><i class="fas fa-school mr-2"></i><span>Home</span></a></li>
+      <!-- <li><a href="#"><i class="fa fa-database" aria-hidden="true"></i> <span>Another Link</span></a></li> -->
+
+      <!-- Cadastros-->
+      <li class="treeview">
+        <a href="#">
+          <i class="fas fa-plus-square mr-2"></i>
+          <span>Cadastros</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li>
+            <a routerLink="/students/new">
+              <i class="fas fa-user-graduate pl-4 mr-3"></i>
+              Alunos
             </a>
-            <ul class="treeview-menu">
-              <li><a href="#">Link in level 2</a></li>
-              <li><a href="#">Link in level 2</a></li>
-            </ul>
           </li>
-  
-          <li class="treeview">
-            <a href="#"><i class="fa fa-plus"></i> <span>Register</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
+          <li>
+            <a routerLink="#">
+              <i class="fas fa-chalkboard-teacher pl-4 mr-2"></i>
+              Professores
             </a>
-            <ul class="treeview-menu">
-              <li><a href="#">Link in level 2</a></li>
-              <li><a href="#">Link in level 2</a></li>
-            </ul>
           </li>
-  
-          <li class="treeview">
-            <a href="#"><i class="fa fa-plus"></i> <span>Register</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
+          <li>
+            <a routerLink="#">
+              <i class="fas fa-user-plus pl-4 mr-2"></i>
+              Colaboradores
             </a>
-            <ul class="treeview-menu">
-              <li><a href="#">Link in level 2</a></li>
-              <li><a href="#">Link in level 2</a></li>
-            </ul>
           </li>
-  
         </ul>
-        <!-- /.sidebar-menu -->
-      </section>
-      <!-- /.sidebar -->
-    </aside>
-  
+      </li>
+
+      <!-- 
+      <li class="treeview">
+        <a href="#"><i class="fa fa-plus"></i> <span>Register</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="#">Link in level 2</a></li>
+          <li><a href="#">Link in level 2</a></li>
+        </ul>
+      </li>
+
+      <li class="treeview">
+        <a href="#"><i class="fa fa-plus"></i> <span>Register</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="#">Link in level 2</a></li>
+          <li><a href="#">Link in level 2</a></li>
+        </ul>
+      </li> -->
+
+    </ul>
+    <!-- /.sidebar-menu -->
+  </section>
+  <!-- /.sidebar -->
+</aside>

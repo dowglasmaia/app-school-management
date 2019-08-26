@@ -14,76 +14,204 @@
 
     <!-- Form-->
     <form>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="name">Nome</label>
-          <input type="text" class="form-control" id="name" placeholder="Nome" required="true">
+
+      <div class="row col-3 float-right shadow-lg mb-1 bg-whites rounded">
+
+        <figure class="figure">
+          <img src="./../../../../../assets/img/aluno.png" class="figure-img img-fluid rounded-circle" alt="...">
+          <!-- <figcaption class="figure-caption"></figcaption> -->
+        </figure>
+      </div>
+
+      <div class="row col-12 col-md-9 float-left">
+        <div class="form-row col-12 ">
+          <!-- Escolaridade-->
+          <div class="form-group col-md-6">
+            <label for="schoolLevel">Grau de Escolaridade</label>
+            <select id="schoolLevel" class="form-control">
+              <option selected>Educação Infantil</option>
+              <option>Ensino Fundamental</option>
+              <option>Ensino Médio</option>
+              <option>Graduação</option>
+              <option>Pós-Graduação</option>
+            </select>
+          </div>
+
+          <!-- Turno-->
+          <div class="form-group col-md-6">
+            <label for="schoolLevel">Turno</label>
+            <select id="schoolLevel" class="form-control">
+              <option selected>Matutino</option>
+              <option>Vespertino</option>
+              <option>Noturno</option>
+              <option>Integral</option>
+            </select>
+          </div>
+
+
+        </div>
+        <div class="form-row col-12">
+          <!-- Serie-->
+          <div class="form-group col-md-6">
+            <label for="schoolLevel">Série e Classe</label>
+            <select id="schoolLevel" class="form-control">
+              <option selected>05º Ano - A</option>
+              <option>06º Ano - B</option>
+              <option>07º Ano - A</option>
+              <option>08º Ano - C</option>
+              <option>09º Ano - G</option>
+            </select>
+          </div>
+          <!-- Bimestre-->
+          <div class="form-group col-md-6">
+            <label for="schoolLevel">Bimestre</label>
+            <select id="schoolLevel" class="form-control">
+              <option selected>Primeiro Bimestre</option>
+              <option>Segundo Bimestre</option>
+              <option>Terceiro Bimestre</option>
+              <option>Quarto Bimestre</option>
+            </select>
+          </div>
         </div>
 
-        <div class="form-group col-md-6">
-          <label for="email">e-Mail</label>
-          <input type="email" class="form-control" id="email" placeholder="e-Mail" required="true">
+        <div class="form-row col-12">
+          <!-- Nome-->
+          <div class="form-group col-md-6">
+            <label for="name">Nome</label>
+            <input type="text" class="form-control" id="name" placeholder="Nome" required="true">
+          </div>
+
+          <!-- E-mail-->
+          <div class="form-group col-md-6">
+            <label for="email">e-Mail</label>
+            <input type="email" class="form-control" id="email" placeholder="e-Mail" required="true">
+          </div>
         </div>
       </div>
 
-      <div class="form-row">
+      <div class="form-row col-12">
+        <!-- CPF-->
         <div class="form-group col-md-3">
           <label for="cpf">CPF</label>
-          <input type="text" min="1" class="form-control" id="cpf" placeholder="CPF - somente números" required="true"
+          <input type="text" class="form-control" id="cpf" placeholder="CPF - somente números" required="true"
             mask='000.000.000-00'>
         </div>
 
+        <!-- RG-->
         <div class="form-group col-md-3">
           <label for="rg">RG</label>
           <input type="text" class="form-control" id="rg" placeholder="RG" mask='00000000000000'>
         </div>
 
+        <!-- Data de nascimento-->
         <div class="form-group col-md-3">
           <label for="dateOfBirth">Data de Nascimento</label>
           <input type="date" class="form-control" id="dateOfBirth" pattern="dd/MM/yyyy">
         </div>
 
-        <div class="form-group col-md-3">
-          <label for="responsible">Responsável</label>
-          <input type="text" class="form-control" id="responsible" placeholder="Responsável legal">
-        </div>
-
-      </div>
-
-
-      <div class="form-row">
+        <!-- Telefone-->
         <div class="form-group col-md-3">
           <label for="fone">Telefone</label>
           <input type="text" class="form-control" id="fone" mask='(000) 0 0000-0000' placeholder="Telefone"
             required="true">
         </div>
 
+      </div>
+
+
+      <div class="form-row col-12">
+        <!-- Respondavel-->
+        <div class="form-group col-md-6">
+          <label for="responsible">Responsável</label>
+          <input type="text" class="form-control" id="responsible" placeholder="Responsável legal">
+        </div>
+        <!--CPF Respondavel-->
+        <div class="form-group col-md-6">
+          <label for="cpf-responsible">CPF do Responsável</label>
+          <input type="text" class="form-control" id="cpf-responsible" placeholder="somente números"
+            mask='000.000.000-00'>
+        </div>
+      </div>
+
+      <!-- ///-->
+      <hr>
+
+
+      <div class="form-row col-12">
+        <!-- Estado - UF-->
+        <div class="form-group col-md-2">
+          <label for="district">UF</label>
+          <select id="district" class="form-control">
+            <option selected>Goiás - GO</option>
+            <option>Amazonas - AM</option>
+            <option>Maranhão - MA</option>
+            <option>Acre - AC</option>
+          </select>
+        </div>
+        <!--Cidade-->
         <div class="form-group col-md-3">
-          <label for="schoolLevel">Grau de Escolaridade</label>
-          <select id="schoolLevel" class="form-control">
-            <option selected>Educação Infantil</option>
-            <option>Ensino Fundamental</option>
-            <option>Ensino Médio</option>
-            <option>Graduação</option>
-            <option>Pós-Graduação</option>
+          <label for="city">Cidade</label>
+          <select id="city" class="form-control">
+            <option selected>Aparecida de Goiania</option>
+            <option>Goiânia</option>
+            <option>Trindade</option>
+            <option>Goiás</option>
           </select>
         </div>
 
-        <div class="form-group col-md-3">
-          <label for="schoolLevel">Bimestre</label>
-          <select id="schoolLevel" class="form-control">
-            <option selected>Primeiro Bimestre</option>
-            <option>Segundo Bimestre</option>
-            <option>Terceiro Bimestre</option>
-            <option>Quarto Bimestre</option>
-          </select>
+        <!-- logradouro-->
+        <div class="form-group col-md-5">
+          <label for="logradouro">Logradouro</label>
+          <input type="text" class="form-control" id="logradouro" placeholder="Logradouro">
         </div>
 
-
+        <!-- numero-->
+        <div class="form-group col-md-2">
+          <label for="numero">Número</label>
+          <input type="text" class="form-control" id="numero" placeholder="numero">
+        </div>
 
       </div>
 
+      <div class="form-row col-12">
+        <!-- CEP-->
+        <div class="form-group col-md-2">
+          <label for="cep">CEP</label>
+          <input type="text" class="form-control" id="cep" placeholder="CEP" mask="00.000-000">
+        </div>
+        <!-- setor / bairro-->
+        <div class="form-group col-md-5">
+          <label for="bairro">Bairro</label>
+          <input type="text" class="form-control" id="bairro" placeholder="Bairro">
+        </div>
+        <!-- complemento-->
+        <div class="form-group col-md-5">
+          <label for="complemento">Complemento</label>
+          <input type="text" class="form-control" id="complemento" placeholder="Complemento">
+        </div>
+      </div>
+
+      <div class="form-row col-12">
+        <!-- referencia-->
+        <div class="form-group col-md-7">
+          <label for="ref">Ponto de Referência</label>
+          <input type="text" class="form-control" id="ref" placeholder="Ponto de Referência">
+        </div>
+
+      </div>
+
+      <div class="form-row card-footer col-12">
+        <button type="button" class="btn btn-primary mr-2">
+          <i class="far fa-save mr-2"></i>Salvar
+        </button>
+        <button type="button" class="btn btn-warning mr-2">
+          <i class="fas fa-list mr-2"></i>Listar
+        </button>
+      </div>
+
+
     </form>
+    <!--/end form-->
 
 
   </div>
