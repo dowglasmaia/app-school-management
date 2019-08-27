@@ -7,11 +7,13 @@ import { StudentListComponent } from './components/student-list/student-list.com
 import { SharedModule } from 'src/app/shared/shared.module';
 
 import {InputMaskModule} from 'primeng/inputmask';
+import { StudentComponent } from './components/student/student.component';
 
 @NgModule({
   declarations: [
     StudentFormComponent,
-    StudentListComponent
+    StudentListComponent,
+    StudentComponent
   ],
   imports: [
    SharedModule,

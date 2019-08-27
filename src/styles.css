@@ -1,6 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap');
 
-a{
-    font-family: 'PT Sans Narrow', sans-serif; 
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+a {
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+h2,
+h3,
+h4 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h4 {
+    font-size: 22px;
 }

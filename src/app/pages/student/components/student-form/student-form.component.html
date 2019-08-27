@@ -9,12 +9,20 @@
 
 <!-- Card -->
 <div class="card">
-  <h5 class="card-header">Cadastro de Estudantes</h5>
-  <div class="card-body">
+  <h5 class="card-header">
+    <i class="fas fa-graduation-cap"></i>
+    Cadastro de Estudantes
 
+    <span class="float-right">
+      <a routerLink="/students">
+        <i class="fas fa-door-open" data-toggle="tooltip" data-placement="top" title="Home Estudantes"></i>
+      </a>
+    </span>
+  </h5>
+
+  <div class="card-body">
     <!-- Form-->
     <form>
-
       <div class="row col-3 float-right shadow-lg mb-1 bg-whites rounded">
 
         <figure class="figure">
@@ -27,7 +35,7 @@
         <div class="form-row col-12 ">
           <!-- Escolaridade-->
           <div class="form-group col-md-6">
-            <label for="schoolLevel">Grau de Escolaridade</label>
+            <label for="schoolLevel">Escolaridade</label>
             <select id="schoolLevel" class="form-control">
               <option selected>Educação Infantil</option>
               <option>Ensino Fundamental</option>
