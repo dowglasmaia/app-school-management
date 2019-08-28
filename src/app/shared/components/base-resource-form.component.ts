@@ -28,6 +28,7 @@ toastr.options = {
     "hideMethod": "fadeOut"
 }
 
+
 export abstract class BaseResourceForm<T extends BaseResourceModel> implements OnInit, AfterContentChecked {
 
     currentAction: string;
@@ -53,13 +54,14 @@ export abstract class BaseResourceForm<T extends BaseResourceModel> implements O
 
 
     ngOnInit(): void {
-
-
+        this.setCurrentAction();
+        this.buildResourceForm();
+        this.loadResource();
     }
 
     /* carregar logo após todos os componentes da pagina serem carregados,*/
     ngAfterContentChecked(): void {
-
+        this.setPageTitle();
     }
 
     /* Submissão do Formulario*/
