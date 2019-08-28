@@ -29,5 +29,9 @@ export class StudentModel extends BaseResourceModel {
     ) {
         super();
     }
+    /* jsonData*/
+    static fromJson(jsonData: any): StudentModel {
+        return Object.assign(new StudentModel(), jsonData)
+    }
 
 }
