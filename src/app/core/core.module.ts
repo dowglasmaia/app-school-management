@@ -16,7 +16,8 @@ import { HeaderComponent } from './components/header/header.component';
     TemplateComponent,
     FooterComponent,
     NavComponent,
-    HeaderComponent],
+    HeaderComponent
+  ],
 
   imports: [
     CommonModule,
@@ -26,12 +27,17 @@ import { HeaderComponent } from './components/header/header.component';
     RouterModule,
   ],
 
-  exports: [
-    CommonModule,
+  exports: [   
     BrowserModule,
+    BrowserAnimationsModule,
+    RouterModule,
+    HttpClientModule,
 
     // core components
     TemplateComponent,
+    FooterComponent,
+    NavComponent,
+    HeaderComponent
   ]
 
 })

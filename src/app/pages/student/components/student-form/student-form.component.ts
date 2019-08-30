@@ -26,26 +26,32 @@ export class StudentFormComponent extends BaseResourceForm<StudentModel> impleme
   }
 
   /* Criando o Formulario de Estudante*/
-  protected buildResourceForm(): void {
+  protected buildResourceForm() {
     this.formGroup = this.formBuild.group({
-        id: [null],
-        name: ['', [Validators.required]],
-        genero: ['', [Validators.required]],
-        cpf: ['', [Validators.required]],
-        dateOfBirth: ['', [Validators.required]],
-        ndateOfEnrollmentame: [null],
-        trasferDate: [null],
-        dateOfDeparture: [null],
-        responsible: ['', [Validators.required]],
-        email: ['', [Validators.required]],
-        password: [null],
-        telephone: ['', [Validators.required]],
-        schoolLevel: ['', [Validators.required]],
-        schoolGrade: ['', [Validators.required]],
-        institution: ['', [Validators.required]],
-        address: ['', [Validators.required]],
-        notes: [null],
-        quarters: ['', [Validators.required]],
+      id: [null],
+      name: ['', [Validators.required]],
+      genero: ['', [Validators.required]],
+      cpf: ['', [Validators.required]],
+      dateOfBirth: ['', [Validators.required]],
+      ndateOfEnrollmentame: [null],
+      trasferDate: [null],
+      dateOfDeparture: [null],
+      responsible: ['', [Validators.required]],
+      email: ['', [Validators.required]],
+      password: [null],
+      telephone: ['', [Validators.required]],
+      schoolLevel: ['', [Validators.required]],
+      schoolGrade: ['', [Validators.required]],
+      institution: ['', [Validators.required]],
+      street: ['', [Validators.required]],
+      district: ['', [Validators.required]],
+      postalCode: ['', [Validators.required]],
+      number: ['', [Validators.required]],
+      complement: ['', [Validators.required]],
+      pointOfReference: ['', [Validators.required]],
+      city: ['', [Validators.required]],
+      notes: [null],
+
     })
   }
 

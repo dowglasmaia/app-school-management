@@ -1,9 +1,8 @@
 import { BaseResourceModel } from 'src/app/shared/model/base_resource.model';
 import { SchoolgradeModel } from '../../schoolgrade/model/schoolgrade-model';
 import { InstitutionModel } from '../../institution/model/institution-model';
-import { AddressModel } from '../../address/model/address-model';
 import { StudentNoteModel } from '../../studentnote/model/studentNote-model';
-import { SchoolQuaterModel } from '../../schoolquarter/model/schoolquater-model';
+import { CityModel } from '../../city/model/city-model';
 
 export class StudentModel extends BaseResourceModel {
 
@@ -22,9 +21,15 @@ export class StudentModel extends BaseResourceModel {
         schoolLevel?: string,
         schoolGrade?: SchoolgradeModel,
         institution?: InstitutionModel,
-        address?: AddressModel,
+        street?: string,
+        district?:string,
+        postalCode?:string,
+        number?:string,
+        complement?:string,
+        pointOfReference?:string,
+        city?:CityModel,
         notes: StudentNoteModel[] = [],
-        quarters: SchoolQuaterModel[] = []
+       
 
     ) {
         super();

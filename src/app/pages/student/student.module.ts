@@ -15,10 +15,12 @@ import { StudentComponent } from './components/student/student.component';
     StudentListComponent,
     StudentComponent
   ],
+
   imports: [
    SharedModule,
     StudentRoutingModule,
     InputMaskModule
-  ]
+  ],
+  
 })
 export class StudentModule { }
