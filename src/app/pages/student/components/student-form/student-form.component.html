@@ -22,7 +22,7 @@
 
   <div class="card-body">
     <!-- Form-->
-    <form>
+    <form [formGroup]="formGroup" (ngSubmit)="submitForm()">
       <div class="row col-3 float-right shadow-lg mb-1 bg-whites rounded">
 
         <figure class="figure">
@@ -37,11 +37,9 @@
           <div class="form-group col-md-6">
             <label for="schoolLevel">Escolaridade</label>
             <select id="schoolLevel" class="form-control">
-              <option selected>Educação Infantil</option>
-              <option>Ensino Fundamental</option>
-              <option>Ensino Médio</option>
-              <option>Graduação</option>
-              <option>Pós-Graduação</option>
+              <!-- fazendo um Laço nas Opções e Definindo os Valores dinamicamente-->
+              <option  *ngFor="let option of levelEducations" [value] = "option.value">{{option.description}}</option>
+             
             </select>
           </div>
 

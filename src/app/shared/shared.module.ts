@@ -19,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
   exports: [
     CommonModule,
+    ReactiveFormsModule,
     NgxMaskModule,
     RouterModule
   ],

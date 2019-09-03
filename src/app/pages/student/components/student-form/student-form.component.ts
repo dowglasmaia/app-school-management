@@ -3,6 +3,8 @@ import { BaseResourceForm } from 'src/app/shared/components/base-resource-form.c
 import { StudentModel } from '../../model/student-model';
 import { StudentService } from '../../services/student.service';
 import { Validators } from '@angular/forms';
+import { LevelEducationComponent } from 'src/app/pages/level-education/level-education-form/level-education.component';
+import { LevelEducationModel } from 'src/app/pages/level-education/model/level-education';
 
 @Component({
   selector: 'app-student-form',
@@ -13,6 +15,7 @@ import { Validators } from '@angular/forms';
 
 export class StudentFormComponent extends BaseResourceForm<StudentModel> implements OnInit {
 
+  levelEducations: LevelEducationModel[];
 
   constructor(
     protected studentService: StudentService,
@@ -22,11 +25,14 @@ export class StudentFormComponent extends BaseResourceForm<StudentModel> impleme
   }
 
   ngOnInit() {
+    this.getLevelEducations();
+
+
     super.ngOnInit();
   }
 
   /* Criando o Formulario de Estudante*/
-  protected buildResourceForm() {
+  protected buildResourceForm(): void {
     this.formGroup = this.formBuild.group({
       id: [null],
       name: ['', [Validators.required]],
@@ -54,5 +60,22 @@ export class StudentFormComponent extends BaseResourceForm<StudentModel> impleme
 
     })
   }
+
+  public getLevelEducations() {
+    this.studentService.getEscolaridade().subscribe(
+      result => this.levelEducations = result
+
+    );
+
+  }
+
+
+  //Escolaridade
+  //getLevelEducation():
+  //Serie - Classe
+
+  //Cidades por Estado
+
+
 
 }

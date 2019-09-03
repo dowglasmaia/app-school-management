@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   
   /* url do servidor*/
-  url_api: "",
+  url_api: "http://localhost:8080",
 
 };
 

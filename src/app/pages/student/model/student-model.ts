@@ -39,4 +39,6 @@ export class StudentModel extends BaseResourceModel {
         return Object.assign(new StudentModel(), jsonData)
     }
 
+    /* escolaridade*/
+
 }
