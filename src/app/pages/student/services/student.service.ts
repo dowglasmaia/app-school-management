@@ -29,9 +29,10 @@ export class StudentService extends BaseResourceServices<StudentModel>{
     return this.http.get<SchoolTimeModel[]>(`${environment.url_api}/schooltimes`);
   }
 
-
-  //buscar serie pela escolaridade e turno
-  public getSerieByEscolaridadeAndTurno(escolaridade: number, turno: number): Observable<SchoolgradeModel> {
-    return null;
+  //get Series
+  public getSeries(): Observable<SchoolgradeModel[]> {
+    return this.http.get<SchoolgradeModel[]>(`${environment.url_api}/grades`);
   }
+
+
 }
