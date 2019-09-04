@@ -32,30 +32,7 @@
       </div>
 
       <div class="row col-12 col-md-9 float-left">
-        <div class="form-row col-12 ">
-          <!-- Escolaridade-->
-          <div class="form-group col-md-6">
-            <label for="schoolLevel">Escolaridade</label>
-            <select id="schoolLevel" class="form-control">
-              <!-- fazendo um Laço nas Opções e Definindo os Valores dinamicamente-->
-              <option  *ngFor="let option of levelEducations" [value] = "option.value">{{option.description}}</option>
-             
-            </select>
-          </div>
 
-          <!-- Turno-->
-          <div class="form-group col-md-6">
-            <label for="schoolLevel">Turno</label>
-            <select id="schoolLevel" class="form-control">
-              <option selected>Matutino</option>
-              <option>Vespertino</option>
-              <option>Noturno</option>
-              <option>Integral</option>
-            </select>
-          </div>
-
-
-        </div>
         <div class="form-row col-12">
           <!-- Serie-->
           <div class="form-group col-md-6">
@@ -68,7 +45,32 @@
               <option>09º Ano - G</option>
             </select>
           </div>
-          <!-- Bimestre-->
+
+          <!-- Turno-->
+          <div class="form-group col-md-6">
+            <label for="schoolLevel">Turno</label>
+            <select id="schoolLevel" class="form-control">
+              <option selected [value]="">Selecione...</option>
+              <option id="schoolTm" *ngFor="let option of schoolTimes" [value]="option.value">{{option.description}}
+              </option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- <div class="form-row col-12 ">
+         
+          <div class="form-group col-md-6">
+            <label for="schoolLevel">Escolaridade</label>
+            <select id="schoolLevel" class="form-control">
+             
+              <option selected [value]="">Selecione...</option>
+              <option id="levelEd" *ngFor="let option of levelEducations" [value]="option.value">{{option.description}}
+              </option>
+            </select>
+          </div>
+
+         
           <div class="form-group col-md-6">
             <label for="schoolLevel">Bimestre</label>
             <select id="schoolLevel" class="form-control">
@@ -78,48 +80,49 @@
               <option>Quarto Bimestre</option>
             </select>
           </div>
-        </div>
+        </div> -->
 
         <div class="form-row col-12">
           <!-- Nome-->
-          <div class="form-group col-md-6">
+          <div class="form-group col">
             <label for="name">Nome</label>
-            <input type="text" class="form-control" id="name" placeholder="Nome" required="true">
-          </div>
-
-          <!-- E-mail-->
-          <div class="form-group col-md-6">
-            <label for="email">e-Mail</label>
-            <input type="email" class="form-control" id="email" placeholder="e-Mail" required="true">
+            <input type="text" class="form-control" id="name" required="true">
           </div>
         </div>
+
+        <div class="form-row col-12">
+          <!-- E-mail-->
+          <div class="form-group col-md-8">
+            <label for="email">e-Mail</label>
+            <input type="email" class="form-control" id="email" placeholder="" required="true">
+          </div>
+
+          <!-- Telefone -->
+          <div class="form-group col-md-4">
+            <label for="fone">Telefone</label>
+            <input type="text" class="form-control" id="fone" mask='(000) 0 0000-0000' required="true">
+          </div>
+        </div>
+
       </div>
 
       <div class="form-row col-12">
         <!-- CPF-->
         <div class="form-group col-md-3">
           <label for="cpf">CPF</label>
-          <input type="text" class="form-control" id="cpf" placeholder="CPF - somente números" required="true"
-            mask='000.000.000-00'>
+          <input type="text" class="form-control" id="cpf" required="true" mask='000.000.000-00'>
         </div>
 
         <!-- RG-->
         <div class="form-group col-md-3">
           <label for="rg">RG</label>
-          <input type="text" class="form-control" id="rg" placeholder="RG" mask='00000000000000'>
+          <input type="text" class="form-control" id="rg" mask='00000000000000'>
         </div>
 
         <!-- Data de nascimento-->
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-4">
           <label for="dateOfBirth">Data de Nascimento</label>
           <input type="date" class="form-control" id="dateOfBirth" pattern="dd/MM/yyyy">
-        </div>
-
-        <!-- Telefone-->
-        <div class="form-group col-md-3">
-          <label for="fone">Telefone</label>
-          <input type="text" class="form-control" id="fone" mask='(000) 0 0000-0000' placeholder="Telefone"
-            required="true">
         </div>
 
       </div>
@@ -129,19 +132,15 @@
         <!-- Respondavel-->
         <div class="form-group col-md-6">
           <label for="responsible">Responsável</label>
-          <input type="text" class="form-control" id="responsible" placeholder="Responsável legal">
+          <input type="text" class="form-control" id="responsible">
         </div>
+
         <!--CPF Respondavel-->
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
           <label for="cpf-responsible">CPF do Responsável</label>
-          <input type="text" class="form-control" id="cpf-responsible" placeholder="somente números"
-            mask='000.000.000-00'>
+          <input type="text" class="form-control" id="cpf-responsible" mask='000.000.000-00'>
         </div>
       </div>
-
-      <!-- ///-->
-      <hr>
-
 
       <div class="form-row col-12">
         <!-- Estado - UF-->
@@ -168,13 +167,13 @@
         <!-- logradouro-->
         <div class="form-group col-md-5">
           <label for="logradouro">Logradouro</label>
-          <input type="text" class="form-control" id="logradouro" placeholder="Logradouro">
+          <input type="text" class="form-control" id="logradouro">
         </div>
 
         <!-- numero-->
         <div class="form-group col-md-2">
           <label for="numero">Número</label>
-          <input type="text" class="form-control" id="numero" placeholder="numero">
+          <input type="text" class="form-control" id="numero" placeholder="">
         </div>
 
       </div>
@@ -183,17 +182,17 @@
         <!-- CEP-->
         <div class="form-group col-md-2">
           <label for="cep">CEP</label>
-          <input type="text" class="form-control" id="cep" placeholder="CEP" mask="00.000-000">
+          <input type="text" class="form-control" id="cep" placeholder="" mask="00.000-000">
         </div>
         <!-- setor / bairro-->
         <div class="form-group col-md-5">
           <label for="bairro">Bairro</label>
-          <input type="text" class="form-control" id="bairro" placeholder="Bairro">
+          <input type="text" class="form-control" id="bairro" placeholder="">
         </div>
         <!-- complemento-->
         <div class="form-group col-md-5">
           <label for="complemento">Complemento</label>
-          <input type="text" class="form-control" id="complemento" placeholder="Complemento">
+          <input type="text" class="form-control" id="complemento" placeholder="">
         </div>
       </div>
 
@@ -201,7 +200,7 @@
         <!-- referencia-->
         <div class="form-group col-md-7">
           <label for="ref">Ponto de Referência</label>
-          <input type="text" class="form-control" id="ref" placeholder="Ponto de Referência">
+          <input type="text" class="form-control" id="ref" placeholder="">
         </div>
 
       </div>

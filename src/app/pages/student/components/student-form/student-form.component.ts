@@ -5,6 +5,7 @@ import { StudentService } from '../../services/student.service';
 import { Validators } from '@angular/forms';
 import { LevelEducationComponent } from 'src/app/pages/level-education/level-education-form/level-education.component';
 import { LevelEducationModel } from 'src/app/pages/level-education/model/level-education';
+import { SchoolTimeModel } from 'src/app/pages/schoolTime/model/school-model';
 
 @Component({
   selector: 'app-student-form',
@@ -15,7 +16,11 @@ import { LevelEducationModel } from 'src/app/pages/level-education/model/level-e
 
 export class StudentFormComponent extends BaseResourceForm<StudentModel> implements OnInit {
 
-  levelEducations: LevelEducationModel[];
+  levelEducations: LevelEducationModel[] = [];
+  levelEducation_Id: number;
+
+  schoolTimes: SchoolTimeModel[] = []
+  schoolTime_Id: number;
 
   constructor(
     protected studentService: StudentService,
@@ -26,7 +31,7 @@ export class StudentFormComponent extends BaseResourceForm<StudentModel> impleme
 
   ngOnInit() {
     this.getLevelEducations();
-
+    this.getSchoolTime();
 
     super.ngOnInit();
   }
@@ -61,17 +66,25 @@ export class StudentFormComponent extends BaseResourceForm<StudentModel> impleme
     })
   }
 
+  /* Listar Escolaridades*/
   public getLevelEducations() {
     this.studentService.getEscolaridade().subscribe(
       result => this.levelEducations = result
-
     );
+  }
 
+  //pegando o id da escolaridade
+ 
+
+  /* Listar Horarios*/
+  public getSchoolTime() {
+    this.studentService.getHorarios().subscribe(
+      result => console.log(this.schoolTimes = result)
+    );
   }
 
 
-  //Escolaridade
-  //getLevelEducation():
+
   //Serie - Classe
 
   //Cidades por Estado

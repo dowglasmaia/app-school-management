@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { SchoolgradeModel } from '../../schoolgrade/model/schoolgrade-model';
 import { LevelEducationModel } from '../../level-education/model/level-education';
 import { environment } from 'src/environments/environment';
+import { SchoolTimeModel } from '../../schoolTime/model/school-model';
 
 @Injectable({
   providedIn: 'root'
@@ -18,12 +19,15 @@ export class StudentService extends BaseResourceServices<StudentModel>{
     super("students", injector, StudentModel.fromJson);
   }
 
-//get Escolaridades
-public getEscolaridade():Observable<LevelEducationModel[]>{
-  return this.http.get<LevelEducationModel[]>(`${environment.url_api}/level-educations`);
-}
+  //get Escolaridades
+  public getEscolaridade(): Observable<LevelEducationModel[]> {
+    return this.http.get<LevelEducationModel[]>(`${environment.url_api}/level-educations`);
+  }
 
-//get Turnos
+  //get Horarios
+  public getHorarios(): Observable<SchoolTimeModel[]> {
+    return this.http.get<SchoolTimeModel[]>(`${environment.url_api}/schooltimes`);
+  }
 
 
   //buscar serie pela escolaridade e turno
