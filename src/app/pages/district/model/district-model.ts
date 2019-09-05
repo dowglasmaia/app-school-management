@@ -6,7 +6,7 @@ export class DistrictModel extends BaseResourceModel {
     constructor(
         name?: string,
         initials?: string,
-        cities: CityModel[]= []
+        cities: CityModel[]= [] 
     ) {
         super();
     }
